@@ -1,0 +1,21 @@
+$font: 'League Spartan', sans-serif;
+
+
+// Typography
+@mixin font-regular($font_size) {
+  font-family: $font;
+  font-weight: 400;
+  font-size: $font_size;
+}
+
+@mixin font-medium($font_size) {
+  font-family: $font;
+  font-weight: 500;
+  font-size: $font_size;
+}
+
+@mixin font-bold($font_size) {
+  font-family: $font;
+  font-weight: 700;
+  font-size: $font_size;
+}

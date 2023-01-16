@@ -1,0 +1,136 @@
+@import 'variables';
+
+// Primary
+$primary: hsl(300, 43%, 22%);
+$secondary: hsl(333, 80%, 67%);
+
+// Supplementary
+
+$dg-magenta: hsl(303, 10%, 53%);
+$lg-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+html {
+  font-size: 15px;
+  font-family: 'League Spartan', sans-serif;;
+}
+
+main {
+  background: $white;
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.card {
+  background: $primary;
+  color: $white;
+  width: 317px;
+  height: 211px;
+  border-radius: 9px;
+  .card-title {
+    @include font-bold(1rem);
+    margin: 0;
+    margin-top: 1rem;
+  }
+  .card-subtitle {
+    @include font-bold(1rem);
+    color: $secondary
+  }
+  .card-text {
+    @include font-medium(.9rem);
+    margin-top: 1rem;
+  }
+  .card-body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .img-fluid {
+    border-radius: 50%
+  }
+}
+
+.services {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  h1 {
+    @include font-bold(3rem);
+    color: $primary;
+    margin-right: 12rem;
+    line-height: 2.5rem;
+  }
+  p {
+    @include font-regular(1.2rem);
+    color: $primary;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    margin-right: 6rem;
+  }
+}
+
+.ratings {
+  @include  font-bold(1rem);
+  color: $primary;
+}
+
+ul {
+  margin-top: 3rem;
+}
+
+.star-review,
+.star-report,
+.star-besttech {
+  list-style: none;
+  background: $lg-magenta;
+  width: 75%;
+  padding: 1rem;
+  padding-left: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.star-report {
+  margin-left: 3rem;
+}
+.star-besttech {
+  margin-left: 6rem;
+}
+
+@media only screen and (max-width: 600px) {
+.star-review,
+.star-report,
+.star-besttech {
+    list-style: none;
+    background: $lg-magenta;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-left: 0;
+  }
+  .pl-3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .services h1 {
+    margin-top: 4rem;
+    margin-right: 0;
+    text-align: center;
+  }
+  .services p {
+    margin-right: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 .8rem 0 .8rem;
+  }
+}
